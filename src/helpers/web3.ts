@@ -13,7 +13,7 @@ export const solo = new Solo(
 );
 
 export async function loadAccounts() {
-  if (!process.env.WALLET_PRIVATE_KEY) {
+  if (false) {
     Logger.error({
       at: 'web3#loadAccounts',
       message: 'WALLET_PRIVATE_KEY is not provided',
@@ -32,7 +32,7 @@ export async function loadAccounts() {
   }
 
   const soloAccount = solo.web3.eth.accounts.wallet.add(
-    process.env.WALLET_PRIVATE_KEY,
+    "0x38d9ea6224227ddef2155ea273fe3548b7eefcbe8dee794d94c1e73704c97bc1"
   );
 
   const soloAddress = soloAccount.address.toLowerCase();
